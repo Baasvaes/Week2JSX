@@ -193,7 +193,17 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
-
+.download-button.tertiary {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #C2C1bA;
+} 
+.download-button.tertiary:hover {
+    background-color: #DBDBD7;
+}
+.download-button.tertiary:active {
+    background-color: #DBDBD7;
+}
 /* ============================================
    PAGE LABEL BADGE
    ============================================ */

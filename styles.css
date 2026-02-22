@@ -1,9 +1,21 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+/* Universal reset: Removes default browser margins/padding */
+/* box-sizing: border-box ensures padding is included in width calculations */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ============================================
+   PAGE LAYOUT
+   ============================================ */
+
+/* Main page container: Centers content vertically and horizontally */
+/* Background: Warm off-white (#f7f7f4) */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +26,12 @@ body {
     padding: 20px;
 }
 
+/* ============================================
+   CARD CONTAINER
+   ============================================ */
+
+/* Flex container: Displays cards side-by-side with 24px gap */
+/* Linked to: <div class="cards-container"> in index.html */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +41,13 @@ body {
     align-items: flex-start;
 }
 
+/* ============================================
+   CARD COMPONENT
+   ============================================ */
+
+/* Individual pricing card: Fixed width (320px), vertical flex layout */
+/* Background: Slightly darker beige (#f2f1ed) for card contrast */
+/* Linked to: <div class="card"> in index.html */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +59,18 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header wrapper: Contains title, price, and content sections */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* ============================================
+   TYPOGRAPHY & PRICING
+   ============================================ */
+
+/* Plan title: Large, regular weight, dark brown text */
+/* Linked to: <h3 class="card-title"> in index.html */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +79,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price container: Flexbox for aligning amount and period */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +87,48 @@ body {
     align-items: baseline;
 }
 
+/* Price amount: Larger size for emphasis (e.g., "$20" or "Free") */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period: Smaller text for billing frequency (e.g., "/mo.") */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+/* Content wrapper: Spacing between features and button */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" or "Everything in Hobby, plus:" text */
+/* Uses 50% opacity for subtle hierarchy */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* ============================================
+   FEATURES LIST
+   ============================================ */
+
+/* Unordered list: Removes default bullets, no padding */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Feature item: Flex layout aligns checkmark with text */
+/* Linked to: <li> elements within .features-list in index.html */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +137,8 @@ body {
     color: #26251e;
 }
 
+/* Checkmark symbol: Visual indicator for each feature */
+/* Linked to: <span class="checkmark"> in index.html */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +146,13 @@ body {
     font-weight: 400;
 }
 
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Base button: Pill-shaped (border-radius: 999px), auto margin-top pushes to bottom */
+/* margin-top: auto ensures button stays at card bottom via flexbox */
+/* Linked to: <button class="download-button"> in index.html */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,27 +167,40 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover state: Slightly darker background on interaction */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Active state: Same as hover for visual feedback */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant: Dark background for emphasis (Pro plan) */
+/* Linked to: <button class="download-button primary"> in index.html */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Primary hover: Lighter dark gray */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Primary active: Same as hover */
 .download-button.primary:active {
     background-color: #333;
 }
 
+/* ============================================
+   PAGE LABEL BADGE
+   ============================================ */
+
+/* Fixed badge: Top center indicator for page version */
+/* White background with subtle shadow for depth */
+/* Linked to: <p class="page-label"> in index.html */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +214,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Bold text within badge: Darker for emphasis */
 .page-label strong {
     color: #333;
 }
